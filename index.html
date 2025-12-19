@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>El Riobambeñito | Menú</title>
 
-<!-- Fuentes -->
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Libre+Baskerville:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 
 <style>
@@ -20,11 +19,9 @@ body{
   margin:0;
   font-family:'Libre Baskerville', serif;
   color:var(--texto);
-
-  /* FONDO CON LOGO */
   background:
-    linear-gradient(rgba(246,239,228,0.94), rgba(246,239,228,0.94)),
-    url("imagenes/El%20riobambeñito.png");
+    linear-gradient(rgba(246,239,228,0.93), rgba(246,239,228,0.93)),
+    url("images/El riobambeñito.jpg");
   background-repeat:no-repeat;
   background-position:center;
   background-size:500px;
@@ -35,9 +32,9 @@ body{
 .menu{
   max-width:900px;
   margin:40px auto;
-  background:rgba(255,255,255,0.88);
+  background:rgba(255,255,255,0.9);
   border-radius:18px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.15);
+  box-shadow:0 10px 30px rgba(0,0,0,0.12);
   overflow:hidden;
 }
 
@@ -53,7 +50,6 @@ header h1{
   font-family:'Cinzel', serif;
   font-size:36px;
   letter-spacing:2px;
-  color:#000;
 }
 
 header p{
@@ -74,7 +70,6 @@ header p{
   padding:6px 12px;
   border-radius:20px;
   border:1px solid rgba(0,0,0,0.15);
-  background:#fff;
 }
 
 /* SECCIONES */
@@ -82,26 +77,19 @@ header p{
   margin:25px;
   border:1px solid rgba(0,0,0,0.15);
   border-radius:14px;
-  overflow:hidden;
 }
 
 .section-title{
-  background:rgba(139,30,45,0.1);
+  background:rgba(139,30,45,0.08);
   padding:12px 18px;
   display:flex;
   justify-content:space-between;
-  align-items:center;
 }
 
 .section-title h2{
   margin:0;
   font-size:16px;
   letter-spacing:1px;
-  color:#000;
-}
-
-.section-title small{
-  color:#555;
 }
 
 .items{
@@ -111,28 +99,15 @@ header p{
 .item{
   display:flex;
   justify-content:space-between;
-  gap:10px;
   padding:12px 0;
   border-bottom:1px dashed rgba(0,0,0,0.2);
 }
 
 .item:last-child{border-bottom:none;}
 
-.item-name{
-  font-weight:600;
-}
-
-.item-desc{
-  font-size:13px;
-  color:#555;
-  margin-top:4px;
-}
-
-.price{
-  font-weight:700;
-  color:var(--vino);
-  white-space:nowrap;
-}
+.item-name{font-weight:600;}
+.item-desc{font-size:13px;color:#555;margin-top:4px;}
+.price{font-weight:700;color:var(--vino);}
 
 /* FOOTER */
 footer{
@@ -157,48 +132,8 @@ footer{
 
 <header>
   <h1>EL RIOBAMBEÑITO</h1>
-  <p>Tradición &amp; Sabor · Desde 1995</p>
-
-  <div class="badges">
-    <span class="badge">🍽️ Menú</span>
-    <span class="badge">🕒 09:00 – 18:00</span>
-  </div>
+  <p>Tradición & Sabor · Desde 1995</p>
 </header>
-
-<!-- PLATOS TÍPICOS -->
-<div class="section">
-  <div class="section-title">
-    <h2>PLATOS TÍPICOS</h2>
-    <small>Sabores de la casa</small>
-  </div>
-  <div class="items">
-
-    <div class="item">
-      <div>
-        <div class="item-name">Locro con queso</div>
-        <div class="item-desc">Tradicional serrano.</div>
-      </div>
-      <div class="price">$5.50</div>
-    </div>
-
-    <div class="item">
-      <div>
-        <div class="item-name">Seco de Chivo</div>
-        <div class="item-desc">Con arroz y maduro.</div>
-      </div>
-      <div class="price">$9.00</div>
-    </div>
-
-    <div class="item">
-      <div>
-        <div class="item-name">Seco de pollo</div>
-        <div class="item-desc">Estilo casero.</div>
-      </div>
-      <div class="price">$7.00</div>
-    </div>
-
-  </div>
-</div>
 
 <!-- ENTRADAS -->
 <div class="section">
@@ -207,38 +142,15 @@ footer{
     <small>Para empezar</small>
   </div>
   <div class="items">
-
     <div class="item">
       <div>
-        <div class="item-name">Empanadas de morocho</div>
-        <div class="item-desc">Carne molida.</div>
+        <div class="item-name">Empanadas de Morocho</div>
+        <div class="item-desc">Carne molida</div>
       </div>
       <div class="price">$1.20</div>
     </div>
 
     <div class="item">
       <div>
-        <div class="item-name">Para picar</div>
-        <div class="item-desc">Tostado con chicharrón.</div>
-      </div>
-      <div class="price">$0.50</div>
-    </div>
-
-    <div class="item">
-      <div>
         <div class="item-name">Mote con chicharrón</div>
-        <div class="item-desc">Porción tradicional.</div>
-      </div>
-      <div class="price">$4.80</div>
-    </div>
-
-  </div>
-</div>
-
-<footer>
-  Gracias por su visita · El Riobambeñito
-</footer>
-
-</div>
-</body>
-</html>
+        <div class="item-desc">Tradicio
