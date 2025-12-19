@@ -33,13 +33,13 @@ body{
 /* HEADER */
 header{
   text-align:center;
-  padding:30px 20px 20px;
+  padding:30px 20px;
+  border-bottom:1px solid rgba(0,0,0,0.1);
 }
 
 header img{
-  width:120px;
-  height:auto;
-  margin-bottom:15px;
+  width:110px;
+  margin-bottom:10px;
 }
 
 header h1{
@@ -50,7 +50,7 @@ header h1{
 }
 
 header p{
-  margin-top:8px;
+  margin-top:6px;
   font-style:italic;
   color:var(--cafe);
 }
@@ -98,7 +98,6 @@ header p{
   border-radius:12px;
 }
 
-/* TEXTO AJUSTADO A IMAGEN */
 .item-text{
   max-height:130px;
   overflow:hidden;
@@ -146,21 +145,66 @@ header p{
 <div class="menu">
 
 <header>
-  <!-- LOGO -->
   <img src="images/El riobambeñito.jpg" alt="Logo El Riobambeñito">
   <h1>EL RIOBAMBEÑITO</h1>
   <p>Tradición &amp; Sabor · Desde 1995</p>
 </header>
 
-<!-- PLATOS TÍPICOS -->
+<!-- ENTRADAS -->
 <div class="section">
-  <div class="section-title">
-    <h2>PLATOS TÍPICOS</h2>
-  </div>
-
+  <div class="section-title"><h2>ENTRADAS</h2></div>
   <div class="items">
 
-    <!-- LOCRO -->
+    <div class="item">
+      <div></div>
+      <div class="item-text"><div class="item-name">Empanadas de morocho</div></div>
+      <div class="price">$1.20</div>
+    </div>
+
+    <div class="item">
+      <div></div>
+      <div class="item-text"><div class="item-name">Habas con queso</div></div>
+      <div class="price">$2.50</div>
+    </div>
+
+    <div class="item">
+      <div></div>
+      <div class="item-text"><div class="item-name">Tostado con chicharrón</div></div>
+      <div class="price">$2.50</div>
+    </div>
+
+    <div class="item">
+      <div></div>
+      <div class="item-text"><div class="item-name">Choclo con queso</div></div>
+      <div class="price">$2.00</div>
+    </div>
+
+    <div class="item">
+      <div></div>
+      <div class="item-text"><div class="item-name">Mote con chicharrón</div></div>
+      <div class="price">$4.80</div>
+    </div>
+
+    <div class="item">
+      <div></div>
+      <div class="item-text"><div class="item-name">Maduro con queso</div></div>
+      <div class="price">$1.20</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SOPAS -->
+<div class="section">
+  <div class="section-title"><h2>SOPAS</h2></div>
+  <div class="items">
+
+    <div class="item">
+      <div></div>
+      <div class="item-text"><div class="item-name">Yahuarlocro</div></div>
+      <div class="price">$5.50</div>
+    </div>
+
     <div class="item">
       <img src="images/Locro con queso.jpg" alt="Locro con queso">
       <div class="item-text">
@@ -173,7 +217,47 @@ header p{
       <div class="price">$5.50</div>
     </div>
 
-    <!-- SECO DE CHIVO -->
+    <div class="item">
+      <div></div>
+      <div class="item-text">
+        <div class="item-name">Locro con cuero</div>
+        <div class="item-desc">
+          Sopa espesa de papas preparada con cebolla, mantequilla y leche,
+          acompañada de queso fresco.
+        </div>
+      </div>
+      <div class="price">$5.50</div>
+    </div>
+
+    <div class="item">
+      <div></div>
+      <div class="item-text"><div class="item-name">Caldo de pollo</div></div>
+      <div class="price">$5.50</div>
+    </div>
+
+    <div class="item">
+      <div></div>
+      <div class="item-text"><div class="item-name">Papas con cuero</div></div>
+      <div class="price">$5.50</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- PLATOS FUERTES -->
+<div class="section">
+  <div class="section-title"><h2>PLATOS FUERTES</h2></div>
+  <div class="items">
+
+    <div class="item"><div></div><div class="item-text"><div class="item-name">Llapingacho con fritada</div></div><div class="price">$11.50</div></div>
+    <div class="item"><div></div><div class="item-text"><div class="item-name">Mote con fritada</div></div><div class="price">$8.00</div></div>
+    <div class="item"><div></div><div class="item-text"><div class="item-name">Choclo con fritada</div></div><div class="price">$8.00</div></div>
+    <div class="item"><div></div><div class="item-text"><div class="item-name">Chuleta con llapingachos</div></div><div class="price">$11.50</div></div>
+    <div class="item"><div></div><div class="item-text"><div class="item-name">Lomo a la plancha</div></div><div class="price">$12.00</div></div>
+    <div class="item"><div></div><div class="item-text"><div class="item-name">Churrasco</div></div><div class="price">$12.00</div></div>
+    <div class="item"><div></div><div class="item-text"><div class="item-name">Corvina frita</div></div><div class="price">$10.50</div></div>
+    <div class="item"><div></div><div class="item-text"><div class="item-name">Apanado</div></div><div class="price">$11.00</div></div>
+
     <div class="item">
       <img src="images/Seco de chivo.jpg" alt="Seco de chivo">
       <div class="item-text">
@@ -183,7 +267,7 @@ header p{
           cocido lentamente con especias tradicionales.
         </div>
       </div>
-      <div class="price">$9.00</div>
+      <div class="price">$11.50</div>
     </div>
 
   </div>
@@ -192,4 +276,3 @@ header p{
 </div>
 </body>
 </html>
-
