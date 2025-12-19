@@ -1,396 +1,231 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Menú | El Riobambeñito</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Riobambeñito | Menú</title>
 
-  <style>
-    :root{
-      /* Paleta inspirada en el logo */
-      --vino: #8B1E2D;         /* rojo vino */
-      --terracota: #C36A2D;    /* naranja/terracota del sello */
-      --crema: #F4E9D6;        /* fondo pergamino */
-      --marfil: #FFF9EE;       /* tarjetas */
-      --negro: #1F1A17;        /* texto principal */
-      --gris: #6A625D;         /* texto secundario */
-      --borde: rgba(31, 26, 23, .18);
-      --sombra: 0 8px 18px rgba(0,0,0,.08);
-    }
+<!-- Fuente elegante tipo logo -->
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Libre+Baskerville:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 
-    *{ box-sizing:border-box; }
+<style>
+:root{
+  --vino:#8B1E2D;
+  --terracota:#C36A2D;
+  --crema:#F6EFE4;
+  --texto:#2b2b2b;
+}
 
-    body{
-      margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color: var(--negro);
-      background:
-        radial-gradient(1200px 600px at 50% -10%, rgba(195,106,45,.18), transparent 60%),
-        radial-gradient(900px 500px at 50% 110%, rgba(139,30,45,.12), transparent 60%),
-        var(--crema);
-    }
+body{
+  margin:0;
+  font-family:'Libre Baskerville', serif;
+  color:var(--texto);
+  background:
+    linear-gradient(rgba(246,239,228,0.93), rgba(246,239,228,0.93)),
+    url("imagenes/El riobambeñito.png");
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:600px;
+  background-attachment:fixed;
+}
 
-    /* Marco tipo “carta” */
-    .page{
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 18px;
-    }
+/* CONTENEDOR PRINCIPAL */
+.menu{
+  max-width:900px;
+  margin:40px auto;
+  background:rgba(255,255,255,0.88);
+  border-radius:18px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.12);
+  overflow:hidden;
+}
 
-    .card{
-      background: var(--marfil);
-      border: 1px solid var(--borde);
-      border-radius: 18px;
-      box-shadow: var(--sombra);
-      overflow: hidden;
-      position: relative;
-    }
+/* HEADER */
+header{
+  text-align:center;
+  padding:30px 20px 20px;
+  border-bottom:1px solid rgba(0,0,0,0.1);
+}
 
-    /* Detalles decorativos suaves */
-    .card::before, .card::after{
-      content:"";
-      position:absolute;
-      width:160px; height:160px;
-      border-radius: 50%;
-      opacity:.10;
-      filter: blur(0.2px);
-      pointer-events:none;
-    }
-    .card::before{ background: var(--terracota); top:-60px; left:-60px; }
-    .card::after{ background: var(--vino); bottom:-70px; right:-70px; }
+header h1{
+  margin:0;
+  font-family:'Cinzel', serif;
+  font-size:36px;
+  letter-spacing:2px;
+  color:#000;
+}
 
-    header{
-      padding: 22px 18px 14px;
-      text-align:center;
-      border-bottom: 1px solid var(--borde);
-      background: linear-gradient(180deg, rgba(255,255,255,.55), rgba(255,255,255,0));
-    }
+header p{
+  margin:8px 0 14px;
+  font-style:italic;
+  color:#555;
+}
 
-    .logo-wrap{
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap:14px;
-      flex-wrap:wrap;
-    }
+.badges{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+}
 
-    .logo{
-      width: 88px;
-      height: 88px;
-      border-radius: 14px;
-      object-fit: contain;
-      background: #fff;
-      border: 1px solid var(--borde);
-      padding: 8px;
-    }
+.badge{
+  font-size:13px;
+  padding:6px 12px;
+  border-radius:20px;
+  border:1px solid rgba(0,0,0,0.15);
+  background:#fff;
+}
 
-    .brand{
-      display:flex;
-      flex-direction:column;
-      gap:4px;
-      align-items:center;
-    }
+/* SECCIONES */
+.section{
+  margin:25px;
+  border:1px solid rgba(0,0,0,0.15);
+  border-radius:14px;
+  overflow:hidden;
+}
 
-    .brand h1{
-      margin:0;
-      font-size: clamp(22px, 3.5vw, 34px);
-      letter-spacing: .8px;
-      text-transform: uppercase;
-    }
+.section-title{
+  background:rgba(139,30,45,0.08);
+  padding:12px 18px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
 
-    .tagline{
-      margin:0;
-      color: var(--gris);
-      font-style: italic;
-      font-size: 14px;
-    }
+.section-title h2{
+  margin:0;
+  font-size:16px;
+  letter-spacing:1px;
+  color:#000;
+}
 
-    .badges{
-      margin-top: 12px;
-      display:flex;
-      justify-content:center;
-      gap:10px;
-      flex-wrap:wrap;
-    }
+.section-title small{
+  color:#555;
+}
 
-    .badge{
-      font-size: 12px;
-      padding: 6px 10px;
-      border-radius: 999px;
-      border: 1px solid var(--borde);
-      background: rgba(255,255,255,.65);
-    }
+.items{
+  padding:10px 18px;
+}
 
-    .badge.vino{ border-color: rgba(139,30,45,.35); }
-    .badge.terra{ border-color: rgba(195,106,45,.40); }
+.item{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  padding:12px 0;
+  border-bottom:1px dashed rgba(0,0,0,0.2);
+}
 
-    .content{
-      padding: 18px;
-    }
+.item:last-child{border-bottom:none;}
 
-    /* Secciones */
-    .section{
-      margin: 18px 0 22px;
-      background: rgba(255,255,255,.55);
-      border: 1px solid var(--borde);
-      border-radius: 16px;
-      overflow:hidden;
-    }
+.item-name{
+  font-weight:600;
+}
 
-    .section-title{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:12px;
-      padding: 12px 14px;
-      background: linear-gradient(90deg, rgba(139,30,45,.10), rgba(195,106,45,.10));
-      border-bottom: 1px solid var(--borde);
-    }
+.item-desc{
+  font-size:13px;
+  color:#555;
+  margin-top:4px;
+}
 
-    .section-title h2{
-      margin:0;
-      font-size: 16px;
-      letter-spacing: .4px;
-      text-transform: uppercase;
-    }
+.price{
+  font-weight:700;
+  color:var(--vino);
+  white-space:nowrap;
+}
 
-    .section-title small{
-      color: var(--gris);
-    }
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:18px;
+  font-size:13px;
+  color:#555;
+  border-top:1px solid rgba(0,0,0,0.1);
+}
 
-    .items{
-      padding: 8px 14px 10px;
-    }
-
-    .item{
-      display:flex;
-      justify-content:space-between;
-      align-items:flex-start;
-      gap:12px;
-      padding: 10px 0;
-      border-bottom: 1px dashed rgba(31,26,23,.22);
-    }
-    .item:last-child{ border-bottom:none; }
-
-    .item-left{
-      min-width: 0;
-    }
-
-    .name{
-      font-weight: 650;
-      margin: 0;
-      line-height: 1.2;
-    }
-
-    .desc{
-      margin: 4px 0 0;
-      color: var(--gris);
-      font-size: 13px;
-      line-height: 1.25;
-    }
-
-    .price{
-      font-weight: 800;
-      white-space: nowrap;
-      color: var(--vino);
-      font-variant-numeric: tabular-nums;
-    }
-
-    /* Imagen opcional por sección */
-    .hero{
-      margin: 14px 0 0;
-      border-radius: 14px;
-      overflow:hidden;
-      border: 1px solid var(--borde);
-      background: #fff;
-    }
-    .hero img{
-      width:100%;
-      height: auto;
-      display:block;
-    }
-
-    footer{
-      padding: 14px 18px 18px;
-      border-top: 1px solid var(--borde);
-      text-align:center;
-      color: var(--gris);
-      font-size: 13px;
-      background: linear-gradient(0deg, rgba(255,255,255,.55), rgba(255,255,255,0));
-    }
-
-    .footer-strong{
-      color: var(--negro);
-      font-weight: 650;
-    }
-
-    /* Botoncito WhatsApp opcional */
-    .cta{
-      margin-top: 10px;
-      display:inline-flex;
-      gap:10px;
-      align-items:center;
-      justify-content:center;
-      text-decoration:none;
-      padding: 10px 14px;
-      border-radius: 12px;
-      border: 1px solid var(--borde);
-      background: rgba(255,255,255,.75);
-      color: var(--negro);
-    }
-    .cta:hover{
-      border-color: rgba(139,30,45,.35);
-      box-shadow: 0 6px 14px rgba(0,0,0,.08);
-    }
-
-    @media (min-width: 700px){
-      .content{ padding: 22px; }
-      header{ padding: 26px 22px 16px; }
-    }
-  </style>
+/* RESPONSIVE */
+@media(max-width:600px){
+  header h1{font-size:28px;}
+  .section{margin:15px;}
+}
+</style>
 </head>
 
 <body>
-  <div class="page">
-    <div class="card">
-      <header>
-        <div class="logo-wrap">
-          <!-- ✅ Sube tu logo a /imagenes/logo.png -->
-          <img class="logo" src="imagenes/logo.png" alt="Logo El Riobambeñito" onerror="this.style.display='none'">
-          <div class="brand">
-            <h1>El Riobambeñito</h1>
-            <p class="tagline">Tradición &amp; Sabor · Desde 1995</p>
-          </div>
-        </div>
 
-        <div class="badges">
-          <span class="badge vino">🍽️ Menú Digital</span>
-          <span class="badge terra">📱 Ideal para QR</span>
-          <span class="badge">🕒 Atención: 08:00 – 22:00</span>
-        </div>
-      </header>
+<div class="menu">
 
-      <div class="content">
+<header>
+  <h1>EL RIOBAMBEÑITO</h1>
+  <p>Tradición &amp; Sabor · Desde 1995</p>
 
-        <!-- ✅ (Opcional) Imagen grande arriba -->
-        <!--
-        <div class="hero">
-          <img src="imagenes/portada.jpg" alt="Portada del restaurante">
-        </div>
-        -->
+  <div class="badges">
+    <span class="badge">🍽️ Menú Digital</span>
+    <span class="badge">📱 Ideal para QR</span>
+    <span class="badge">🕒 08:00 – 22:00</span>
+  </div>
+</header>
 
-        <div class="section">
-          <div class="section-title">
-            <h2>Platos típicos</h2>
-            <small>Sabores de la casa</small>
-          </div>
-          <div class="items">
-            <div class="item">
-              <div class="item-left">
-                <p class="name">Encebollado</p>
-                <p class="desc">Pescado, yuca y cebolla encurtida.</p>
-              </div>
-              <div class="price">$4.50</div>
-            </div>
-            <div class="item">
-              <div class="item-left">
-                <p class="name">Seco de carne</p>
-                <p class="desc">Acompañado con arroz y maduro.</p>
-              </div>
-              <div class="price">$6.00</div>
-            </div>
-            <div class="item">
-              <div class="item-left">
-                <p class="name">Arroz con pollo</p>
-                <p class="desc">Porción completa, estilo casero.</p>
-              </div>
-              <div class="price">$5.00</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="section">
-          <div class="section-title">
-            <h2>Entradas</h2>
-            <small>Para empezar</small>
-          </div>
-          <div class="items">
-            <div class="item">
-              <div class="item-left">
-                <p class="name">Empanadas</p>
-                <p class="desc">Queso / pollo / carne (pregunta disponibilidad).</p>
-              </div>
-              <div class="price">$1.00</div>
-            </div>
-            <div class="item">
-              <div class="item-left">
-                <p class="name">Tostado + Ají</p>
-                <p class="desc">Extra para tus platos.</p>
-              </div>
-              <div class="price">$0.50</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="section">
-          <div class="section-title">
-            <h2>Bebidas</h2>
-            <small>Frías y naturales</small>
-          </div>
-          <div class="items">
-            <div class="item">
-              <div class="item-left">
-                <p class="name">Jugo natural</p>
-                <p class="desc">Naranja / mora / maracuyá.</p>
-              </div>
-              <div class="price">$1.50</div>
-            </div>
-            <div class="item">
-              <div class="item-left">
-                <p class="name">Cola personal</p>
-                <p class="desc">Variedad según stock.</p>
-              </div>
-              <div class="price">$1.00</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- ✅ (Opcional) Sección con foto -->
-        <!--
-        <div class="section">
-          <div class="section-title">
-            <h2>Especial del día</h2>
-            <small>Pregunta en caja</small>
-          </div>
-          <div class="items">
-            <div class="item">
-              <div class="item-left">
-                <p class="name">Hornado</p>
-                <p class="desc">Con mote y ensalada.</p>
-              </div>
-              <div class="price">$7.00</div>
-            </div>
-          </div>
-          <div class="hero">
-            <img src="imagenes/hornado.jpg" alt="Hornado">
-          </div>
-        </div>
-        -->
-
+<!-- PLATOS TÍPICOS -->
+<div class="section">
+  <div class="section-title">
+    <h2>PLATOS TÍPICOS</h2>
+    <small>Sabores de la casa</small>
+  </div>
+  <div class="items">
+    <div class="item">
+      <div>
+        <div class="item-name">Encebollado</div>
+        <div class="item-desc">Pescado, yuca y cebolla encurtida.</div>
       </div>
+      <div class="price">$4.50</div>
+    </div>
 
-      <footer>
-        <div class="footer-strong">¡Gracias por tu visita!</div>
-        <div>Precios incluyen IVA (si aplica). Pregunta por promociones del día.</div>
-        <!-- Opcional: enlace a WhatsApp -->
-        <!-- Cambia el número: 593XXXXXXXXX -->
-        <!--
-        <a class="cta" href="https://wa.me/593999999999" target="_blank" rel="noopener">
-          💬 Pedidos por WhatsApp
-        </a>
-        -->
-      </footer>
+    <div class="item">
+      <div>
+        <div class="item-name">Seco de carne</div>
+        <div class="item-desc">Acompañado con arroz y maduro.</div>
+      </div>
+      <div class="price">$6.00</div>
+    </div>
+
+    <div class="item">
+      <div>
+        <div class="item-name">Arroz con pollo</div>
+        <div class="item-desc">Porción completa, estilo casero.</div>
+      </div>
+      <div class="price">$5.00</div>
     </div>
   </div>
+</div>
+
+<!-- ENTRADAS -->
+<div class="section">
+  <div class="section-title">
+    <h2>ENTRADAS</h2>
+    <small>Para empezar</small>
+  </div>
+  <div class="items">
+    <div class="item">
+      <div>
+        <div class="item-name">Empanadas</div>
+        <div class="item-desc">Queso / pollo / carne.</div>
+      </div>
+      <div class="price">$1.00</div>
+    </div>
+
+    <div class="item">
+      <div>
+        <div class="item-name">Tostado + Ají</div>
+        <div class="item-desc">Extra para tus platos.</div>
+      </div>
+      <div class="price">$0.50</div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  Gracias por su visita · El Riobambeñito
+</footer>
+
+</div>
 </body>
 </html>
