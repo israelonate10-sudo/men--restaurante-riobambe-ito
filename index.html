@@ -1,33 +1,45 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>El Riobambeñito</title>
 <style>
-body { font-family: Arial; background:#f8f8f8; padding:20px; }
-h1 { text-align:center; }
-.item { margin:10px 0; }
-img { display:block; margin-bottom:5px; }
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5; /* fondo general */
+    padding: 20px;
+    margin: 0;
+  }
+
+  h1 {
+    text-align: center;
+    color: #8B0000; /* rojo vino */
+    margin-bottom: 30px;
+  }
+
+  h2 {
+    color: #333333;
+    border-bottom: 2px solid #8B0000;
+    padding-bottom: 5px;
+  }
+
+  .seccion {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+
+  .item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px dashed #ccc;
+    color: #444;
+  }
+
+  .item:last-child {
+    border-bottom: none;
+  }
+
+  .precio {
+    color: #8B0000;
+    font-weight: bold;
+  }
 </style>
-</head>
-<body>
-
-<h1>🍽️ EL RIOBAMBEÑITO</h1>
-
-<img src="El riobambeñito.png" width="120">
-
-<div class="item">
-  <img src="images/arroz.jpg" width="120">
-  <strong>Arroz con pollo</strong> – $5.00
-</div>
-
-<div class="item">
-  <img src="images/encebollado.jpg" width="120">
-  <strong>Encebollado</strong> – $4.00
-</div>
-
-</body>
-</html>
-
-
