@@ -5,145 +5,127 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>El Riobambeñito | Menú</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Libre+Baskerville&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --vino:#8B1E2D;
-  --crema:#F6EFE4;
-  --oscuro:#2b2b2b;
+  --cafe:#3a2c20;
+  --fondo:#f6f0e7;
 }
 
 body{
   margin:0;
   font-family:'Libre Baskerville', serif;
-  background:var(--crema);
-  color:var(--oscuro);
+  background:var(--fondo);
+  color:var(--cafe);
 }
 
 /* CONTENEDOR */
 .menu{
   max-width:900px;
   margin:40px auto;
-  background:#fff;
-  border-radius:20px;
-  box-shadow:0 15px 40px rgba(0,0,0,0.15);
+  background:#ffffff;
+  border-radius:18px;
+  box-shadow:0 12px 30px rgba(0,0,0,0.12);
   overflow:hidden;
 }
 
 /* HEADER */
 header{
-  display:flex;
-  align-items:center;
-  gap:20px;
-  padding:25px;
-  border-bottom:3px solid var(--vino);
+  position:relative;
+  text-align:center;
+  padding:40px 20px 30px;
+  border-bottom:2px solid rgba(58,44,32,0.2);
 }
 
-.logo{
-  width:90px;
-  height:90px;
-  flex-shrink:0;
+header img{
+  position:absolute;
+  top:15px;
+  left:20px;
+  width:80px;
 }
 
-.logo img{
-  width:100%;
-  height:100%;
-  object-fit:contain;
-}
-
-.header-text h1{
+header h1{
   margin:0;
   font-family:'Cinzel', serif;
-  font-size:34px;
+  font-size:38px;
+  color:var(--cafe);
   letter-spacing:2px;
-  color:var(--vino);
 }
 
-.header-text p{
-  margin:6px 0 0;
+header p{
+  margin-top:8px;
   font-style:italic;
-  color:#555;
+  font-size:15px;
 }
 
 /* SECCIONES */
 .section{
   margin:25px;
-  border:1px solid rgba(0,0,0,0.15);
+  border:1px solid rgba(58,44,32,0.25);
   border-radius:14px;
 }
 
 .section-title{
-  background:var(--vino);
-  color:#fff;
-  padding:12px 18px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+  background:rgba(58,44,32,0.08);
+  padding:14px 20px;
 }
 
 .section-title h2{
   margin:0;
-  font-size:16px;
+  font-size:17px;
   letter-spacing:1px;
-}
-
-.section-title small{
-  opacity:0.85;
+  color:var(--cafe);
 }
 
 .items{
-  padding:10px 18px;
+  padding:10px 20px;
 }
 
 .item{
   display:flex;
   justify-content:space-between;
-  gap:15px;
   padding:12px 0;
-  border-bottom:1px dashed rgba(0,0,0,0.2);
+  border-bottom:1px dashed rgba(0,0,0,0.25);
 }
 
-.item:last-child{border-bottom:none;}
+.item:last-child{
+  border-bottom:none;
+}
 
 .item-name{
-  font-weight:700;
+  font-weight:600;
 }
 
 .item-desc{
   font-size:13px;
-  color:#555;
-  margin-top:4px;
+  opacity:0.75;
 }
 
 .price{
   font-weight:700;
-  color:var(--vino);
   white-space:nowrap;
-  font-size:16px;
 }
 
 /* FOOTER */
 footer{
   text-align:center;
-  padding:20px;
+  padding:18px;
   font-size:13px;
-  color:#555;
-  border-top:1px solid rgba(0,0,0,0.1);
+  border-top:1px solid rgba(58,44,32,0.2);
 }
 
 /* RESPONSIVE */
 @media(max-width:600px){
-  header{
-    flex-direction:column;
-    text-align:center;
+  header img{
+    width:60px;
+    left:10px;
   }
-  .logo{
-    width:70px;
-    height:70px;
+  header h1{
+    font-size:28px;
   }
-  .header-text h1{
-    font-size:26px;
+  .section{
+    margin:15px;
   }
 }
 </style>
@@ -154,47 +136,40 @@ footer{
 <div class="menu">
 
 <header>
-  <div class="logo">
-    <img src="images/El riobambeñito.jpg" alt="Logo El Riobambeñito">
-  </div>
-  <div class="header-text">
-    <h1>EL RIOBAMBEÑITO</h1>
-    <p>Tradición &amp; Sabor · Desde 1995</p>
-  </div>
+  <img src="images/El riobambeñito.jpg" alt="Logo El Riobambeñito">
+  <h1>EL RIOBAMBEÑITO</h1>
+  <p>Tradición &amp; Sabor · Desde 1995</p>
 </header>
 
 <!-- PLATOS TÍPICOS -->
 <div class="section">
   <div class="section-title">
     <h2>PLATOS TÍPICOS</h2>
-    <small>Sabores de la casa</small>
   </div>
   <div class="items">
-
     <div class="item">
       <div>
         <div class="item-name">Locro con queso</div>
-        <div class="item-desc">Preparado al estilo tradicional.</div>
+        <div class="item-desc">Plato tradicional serrano.</div>
       </div>
       <div class="price">$5.50</div>
     </div>
 
     <div class="item">
       <div>
-        <div class="item-name">Seco de Chivo</div>
-        <div class="item-desc">Con arroz, maduro y ensalada.</div>
+        <div class="item-name">Seco de chivo</div>
+        <div class="item-desc">Acompañado con arroz y maduro.</div>
       </div>
       <div class="price">$9.00</div>
     </div>
 
     <div class="item">
       <div>
-        <div class="item-name">Seco de Pollo</div>
-        <div class="item-desc">Porción completa, estilo casero.</div>
+        <div class="item-name">Seco de pollo</div>
+        <div class="item-desc">Porción completa estilo casero.</div>
       </div>
       <div class="price">$7.00</div>
     </div>
-
   </div>
 </div>
 
@@ -202,10 +177,8 @@ footer{
 <div class="section">
   <div class="section-title">
     <h2>ENTRADAS</h2>
-    <small>Para empezar</small>
   </div>
   <div class="items">
-
     <div class="item">
       <div>
         <div class="item-name">Empanadas de morocho</div>
@@ -217,19 +190,10 @@ footer{
     <div class="item">
       <div>
         <div class="item-name">Mote con chicharrón</div>
-        <div class="item-desc">Tradicional serrano.</div>
+        <div class="item-desc">Porción tradicional.</div>
       </div>
       <div class="price">$4.80</div>
     </div>
-
-    <div class="item">
-      <div>
-        <div class="item-name">Para picar</div>
-        <div class="item-desc">Tostado con chicharrón.</div>
-      </div>
-      <div class="price">$0.50</div>
-    </div>
-
   </div>
 </div>
 
@@ -238,6 +202,5 @@ footer{
 </footer>
 
 </div>
-
 </body>
 </html>
