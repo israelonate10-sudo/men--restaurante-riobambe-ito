@@ -5,28 +5,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>El Riobambeñito | Menú</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Libre+Baskerville:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --cafe:#3a2c20;
-  --fondo:#f6f0e7;
+  --marron:#3a2c20;
+  --crema:#f6f0e7;
   --naranja:#E48B3E;
 }
 
 body{
   margin:0;
   font-family:'Libre Baskerville', serif;
-  background:var(--fondo);
-  color:#2b2b2b;
+  background:var(--crema);
+  color:#333;
 }
 
+/* CONTENEDOR */
 .menu{
   max-width:900px;
   margin:40px auto;
   background:#fff;
   border-radius:18px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.12);
+  box-shadow:0 12px 30px rgba(0,0,0,0.15);
   overflow:hidden;
 }
 
@@ -35,41 +36,35 @@ header{
   position:relative;
   text-align:center;
   padding:30px 20px 25px;
-  border-bottom:1px solid rgba(0,0,0,0.1);
+  background:var(--crema);
 }
 
-/* LOGO */
-.logo{
+header img{
   position:absolute;
   top:20px;
   left:20px;
+  width:80px;
 }
 
-.logo img{
-  width:90px;
-  height:auto;
-}
-
-/* TITULO */
 header h1{
   margin:0;
   font-family:'Cinzel', serif;
   font-size:36px;
-  color:var(--cafe);
+  color:var(--marron);
 }
 
 header p{
-  margin-top:8px;
+  margin-top:6px;
   font-style:italic;
-  color:var(--cafe);
+  color:var(--marron);
 }
 
 /* SECCIONES */
 .section{
   margin:25px;
-  border:1px solid rgba(0,0,0,0.15);
   border-radius:14px;
   overflow:hidden;
+  border:1px solid rgba(0,0,0,0.15);
 }
 
 .section-title{
@@ -79,38 +74,27 @@ header p{
 
 .section-title h2{
   margin:0;
-  font-size:16px;
-  letter-spacing:1px;
   color:#FFFFFF;
+  letter-spacing:1px;
 }
 
 /* ITEMS */
 .items{
-  padding:15px 18px;
+  padding:18px;
 }
 
 .item{
   display:grid;
-  grid-template-columns:130px 1fr auto;
+  grid-template-columns: 1fr 160px;
   gap:15px;
-  padding:15px 0;
+  padding:16px 0;
   border-bottom:1px dashed rgba(0,0,0,0.2);
-  align-items:start;
 }
 
 .item:last-child{border-bottom:none;}
 
-.item img{
-  width:130px;
-  height:130px;
-  object-fit:cover;
-  border-radius:12px;
-}
-
-/* TEXTO AJUSTADO A IMAGEN */
-.item-text{
-  max-height:130px;
-  overflow:hidden;
+.item-info{
+  max-width:100%;
 }
 
 .item-name{
@@ -122,41 +106,50 @@ header p{
   font-size:13px;
   color:#555;
   line-height:1.4;
+  max-width:100%;
+  word-wrap:break-word;
 }
 
+/* IMAGEN DEL PLATO */
+.item-img{
+  text-align:center;
+}
+
+.item-img img{
+  width:100%;
+  max-width:160px;
+  border-radius:10px;
+  object-fit:cover;
+}
+
+/* PRECIO */
 .price{
   font-weight:700;
-  color:var(--cafe);
-  white-space:nowrap;
+  color:var(--marron);
+  margin-top:8px;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:18px;
+  font-size:13px;
+  color:#555;
+  background:#fafafa;
 }
 
 /* RESPONSIVE */
 @media(max-width:650px){
-  header{
-    padding-top:110px;
-  }
-
-  .logo{
-    left:50%;
-    transform:translateX(-50%);
-  }
-
   .item{
-    grid-template-columns:100px 1fr;
+    grid-template-columns:1fr;
   }
-
-  .price{
-    grid-column:2;
-    margin-top:6px;
+  .item-img img{
+    max-width:100%;
   }
-
-  .item img{
-    width:100px;
-    height:100px;
-  }
-
-  .item-text{
-    max-height:100px;
+  header img{
+    position:static;
+    display:block;
+    margin:0 auto 10px;
   }
 }
 </style>
@@ -167,17 +160,12 @@ header p{
 <div class="menu">
 
 <header>
-  <!-- LOGO -->
-  <div class="logo">
-    <img src="images/El riobambeñito.jpg" alt="Logo El Riobambeñito">
-  </div>
-
-  <!-- TITULO -->
+  <img src="images/El riobambeñito.jpg" alt="Logo El Riobambeñito">
   <h1>EL RIOBAMBEÑITO</h1>
   <p>Tradición &amp; Sabor · Desde 1995</p>
 </header>
 
-<!-- PLATOS TÍPICOS -->
+<!-- PLATOS TIPICOS -->
 <div class="section">
   <div class="section-title">
     <h2>PLATOS TÍPICOS</h2>
@@ -185,34 +173,37 @@ header p{
 
   <div class="items">
 
-    <!-- LOCRO -->
     <div class="item">
-      <img src="images/Locro con queso.jpg" alt="Locro con queso">
-      <div class="item-text">
+      <div class="item-info">
         <div class="item-name">Locro con queso</div>
         <div class="item-desc">
-          Sopa espesa de papas preparada con cebolla, mantequilla y leche, acompañada de queso fresco, maíz tostado y aguacate.
+          Sopa tradicional con queso fresco.
         </div>
+        <div class="price">$5.50</div>
       </div>
-      <div class="price">$5.50</div>
     </div>
 
-    <!-- SECO DE CHIVO -->
     <div class="item">
-      <img src="images/Seco de chivo.jpg" alt="Seco de chivo">
-      <div class="item-text">
+      <div class="item-info">
         <div class="item-name">Seco de chivo</div>
         <div class="item-desc">
-          Acompañado con arroz, maduro y ensalada fresca, cocido lentamente con especias tradicionales.
+          Acompañado con arroz, maduro y ensalada.
         </div>
+        <div class="price">$9.00</div>
       </div>
-      <div class="price">$9.00</div>
+
+      <div class="item-img">
+        <img src="images/Seco de chivo.jpg" alt="Seco de chivo">
+      </div>
     </div>
 
   </div>
 </div>
 
+<footer>
+  Gracias por su visita · El Riobambeñito
+</footer>
+
 </div>
 </body>
 </html>
-
