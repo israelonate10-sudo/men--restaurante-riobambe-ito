@@ -32,22 +32,16 @@ body{
 
 /* HEADER */
 header{
-  position:relative;
   text-align:center;
-  padding:40px 20px 30px;
-  border-bottom:1px solid rgba(0,0,0,0.1);
+  padding:30px 20px 20px;
 }
 
-/* LOGO */
 header img{
-  position:absolute;
-  top:20px;
-  left:20px;
-  width:90px;
+  width:120px;
   height:auto;
+  margin-bottom:15px;
 }
 
-/* TITULO */
 header h1{
   margin:0;
   font-family:'Cinzel', serif;
@@ -104,6 +98,7 @@ header p{
   border-radius:12px;
 }
 
+/* TEXTO AJUSTADO A IMAGEN */
 .item-text{
   max-height:130px;
   overflow:hidden;
@@ -128,26 +123,17 @@ header p{
 
 /* RESPONSIVE */
 @media(max-width:650px){
-  header img{
-    width:70px;
-    top:15px;
-    left:15px;
-  }
-
   .item{
     grid-template-columns:100px 1fr;
   }
-
   .price{
     grid-column:2;
     margin-top:6px;
   }
-
   .item img{
     width:100px;
     height:100px;
   }
-
   .item-text{
     max-height:100px;
   }
@@ -160,6 +146,7 @@ header p{
 <div class="menu">
 
 <header>
+  <!-- LOGO -->
   <img src="images/El riobambeñito.jpg" alt="Logo El Riobambeñito">
   <h1>EL RIOBAMBEÑITO</h1>
   <p>Tradición &amp; Sabor · Desde 1995</p>
@@ -173,23 +160,27 @@ header p{
 
   <div class="items">
 
+    <!-- LOCRO -->
     <div class="item">
       <img src="images/Locro con queso.jpg" alt="Locro con queso">
       <div class="item-text">
         <div class="item-name">Locro con queso</div>
         <div class="item-desc">
-          Sopa espesa de papas preparada con queso fresco, maíz tostado y aguacate.
+          Sopa espesa de papas preparada con cebolla, mantequilla y leche,
+          acompañada de queso fresco, maíz tostado y aguacate.
         </div>
       </div>
       <div class="price">$5.50</div>
     </div>
 
+    <!-- SECO DE CHIVO -->
     <div class="item">
       <img src="images/Seco de chivo.jpg" alt="Seco de chivo">
       <div class="item-text">
         <div class="item-name">Seco de chivo</div>
         <div class="item-desc">
-          Acompañado con arroz, maduro y ensalada fresca, cocido lentamente con especias tradicionales.
+          Acompañado con arroz, maduro y ensalada fresca,
+          cocido lentamente con especias tradicionales.
         </div>
       </div>
       <div class="price">$9.00</div>
@@ -201,3 +192,4 @@ header p{
 </div>
 </body>
 </html>
+
