@@ -5,19 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>El Riobambeñito | Menú</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Libre+Baskerville:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --principal:#3a2c20;
-  --fondo:#f6f0e7;
-  --seccion:#E48B3E;
+  --marron:#3a2c20;
+  --crema:#f6f0e7;
+  --naranja:#E48B3E;
 }
 
 body{
   margin:0;
   font-family:'Libre Baskerville', serif;
-  background:var(--fondo);
+  background:var(--crema);
   color:#333;
 }
 
@@ -34,9 +34,9 @@ body{
 /* HEADER */
 header{
   position:relative;
-  padding:30px 20px 20px;
   text-align:center;
-  border-bottom:1px solid #ddd;
+  padding:30px 20px 25px;
+  background:var(--crema);
 }
 
 header img{
@@ -49,14 +49,14 @@ header img{
 header h1{
   margin:0;
   font-family:'Cinzel', serif;
-  font-size:34px;
-  color:var(--principal);
+  font-size:36px;
+  color:var(--marron);
 }
 
 header p{
-  margin:6px 0 0;
-  color:var(--principal);
+  margin-top:6px;
   font-style:italic;
+  color:var(--marron);
 }
 
 /* SECCIONES */
@@ -64,64 +64,69 @@ header p{
   margin:25px;
   border-radius:14px;
   overflow:hidden;
-  border:1px solid #ddd;
+  border:1px solid rgba(0,0,0,0.15);
 }
 
 .section-title{
-  background:var(--seccion);
-  padding:14px 20px;
+  background:var(--naranja);
+  padding:14px 18px;
 }
 
 .section-title h2{
   margin:0;
   color:#FFFFFF;
-  font-size:18px;
   letter-spacing:1px;
 }
 
+/* ITEMS */
 .items{
-  padding:15px 20px;
+  padding:18px;
 }
 
 .item{
-  display:flex;
-  justify-content:space-between;
+  display:grid;
+  grid-template-columns: 1fr 160px;
   gap:15px;
-  padding:14px 0;
-  border-bottom:1px dashed #ccc;
+  padding:16px 0;
+  border-bottom:1px dashed rgba(0,0,0,0.2);
 }
 
-.item:last-child{
-  border-bottom:none;
+.item:last-child{border-bottom:none;}
+
+.item-info{
+  max-width:100%;
 }
 
 .item-name{
-  font-weight:600;
-  color:#000;
+  font-weight:700;
+  margin-bottom:6px;
 }
 
 .item-desc{
   font-size:13px;
   color:#555;
-  margin-top:4px;
+  line-height:1.4;
+  max-width:100%;
+  word-wrap:break-word;
 }
 
-.price{
-  font-weight:700;
-  color:var(--principal);
-  white-space:nowrap;
-}
-
-/* IMAGEN DE PLATO */
+/* IMAGEN DEL PLATO */
 .item-img{
-  margin-top:10px;
+  text-align:center;
 }
 
 .item-img img{
   width:100%;
-  max-width:280px;
-  border-radius:12px;
-  box-shadow:0 6px 14px rgba(0,0,0,0.2);
+  max-width:160px;
+  border-radius:10px;
+  object-fit:cover;
+}
+
+/* PRECIO */
+.price{
+  font-weight:700;
+  color:var(--marron);
+  margin-top:8px;
 }
 
 /* FOOTER */
@@ -130,16 +135,21 @@ footer{
   padding:18px;
   font-size:13px;
   color:#555;
-  border-top:1px solid #ddd;
+  background:#fafafa;
 }
 
 /* RESPONSIVE */
-@media(max-width:600px){
-  header img{
-    width:60px;
+@media(max-width:650px){
+  .item{
+    grid-template-columns:1fr;
   }
-  header h1{
-    font-size:26px;
+  .item-img img{
+    max-width:100%;
+  }
+  header img{
+    position:static;
+    display:block;
+    margin:0 auto 10px;
   }
 }
 </style>
@@ -164,31 +174,27 @@ footer{
   <div class="items">
 
     <div class="item">
-      <div>
+      <div class="item-info">
         <div class="item-name">Locro con queso</div>
-        <div class="item-desc">Sopa tradicional con queso fresco.</div>
-      </div>
-      <div class="price">$5.50</div>
-    </div>
-
-    <div class="item">
-      <div>
-        <div class="item-name">Seco de Chivo</div>
-        <div class="item-desc">Carne de borrego en salsa, acompañada de papa cocida, arroz, ensalada, tomate y aguacate.</div>
-
-        <div class="item-img">
-          <img src="images/Seco de chivo.jpg" alt="Seco de chivo">
+        <div class="item-desc">
+          Sopa tradicional con queso fresco.
         </div>
+        <div class="price">$5.50</div>
       </div>
-      <div class="price">$9.00</div>
     </div>
 
     <div class="item">
-      <div>
-        <div class="item-name">Seco de pollo</div>
-        <div class="item-desc">Porción completa, estilo casero.</div>
+      <div class="item-info">
+        <div class="item-name">Seco de chivo</div>
+        <div class="item-desc">
+          Carne de borrego en salsa, acompañada de papa cocida, arroz, ensalada, tomate y aguacate..
+        </div>
+        <div class="price">$9.00</div>
       </div>
-      <div class="price">$7.00</div>
+
+      <div class="item-img">
+        <img src="images/Seco de chivo.jpg" alt="Seco de chivo">
+      </div>
     </div>
 
   </div>
@@ -199,7 +205,6 @@ footer{
 </footer>
 
 </div>
-
 </body>
 </html>
 
