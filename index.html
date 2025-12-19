@@ -1,45 +1,84 @@
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5; /* fondo general */
-    padding: 20px;
-    margin: 0;
-  }
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú Restaurante</title>
 
-  h1 {
-    text-align: center;
-    color: #8B0000; /* rojo vino */
-    margin-bottom: 30px;
-  }
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f5f5f5;
+    }
 
-  h2 {
-    color: #333333;
-    border-bottom: 2px solid #8B0000;
-    padding-bottom: 5px;
-  }
+    header {
+      background-color: #8B0000; /* rojo vino */
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
 
-  .seccion {
-    background-color: #ffffff;
-    padding: 15px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  }
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
 
-  .item {
-    display: flex;
-    justify-content: space-between;
-    padding: 8px 0;
-    border-bottom: 1px dashed #ccc;
-    color: #444;
-  }
+    .container {
+      padding: 20px;
+    }
 
-  .item:last-child {
-    border-bottom: none;
-  }
+    .seccion {
+      margin-bottom: 30px;
+    }
 
-  .precio {
-    color: #8B0000;
-    font-weight: bold;
-  }
-</style>
+    .seccion h2 {
+      color: #8B0000;
+      border-bottom: 2px solid #8B0000;
+      padding-bottom: 5px;
+    }
+
+    .item {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px dashed #ccc;
+    }
+
+    .item span {
+      font-size: 16px;
+    }
+
+    .precio {
+      font-weight: bold;
+      color: #333;
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>🍽️ RESTAURANTE EL BUEN SABOR</h1>
+  <p>Menú Digital</p>
+</header>
+
+<div class="container">
+
+  <div class="seccion">
+    <h2>🍛 Platos Principales</h2>
+
+    <div class="item">
+      <span>Arroz con pollo</span>
+      <span class="precio">$5.00</span>
+    </div>
+
+    
