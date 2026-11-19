@@ -16,7 +16,9 @@
   --fondo:#f7f1e8;
 }
 
-* {box-sizing:border-box;}
+* {
+  box-sizing:border-box;
+}
 
 html {
   scroll-behavior:smooth;
@@ -87,7 +89,9 @@ nav a {
   transition:.2s;
 }
 
-nav a:hover {background:var(--naranja);}
+nav a:hover {
+  background:var(--naranja);
+}
 
 .section {
   padding:25px 30px;
@@ -140,11 +144,32 @@ nav a:hover {background:var(--naranja);}
   transform:translateY(-2px);
 }
 
-.item img {
+.item img,
+.photo-placeholder {
   width:115px;
   height:115px;
   border-radius:10px;
+}
+
+.item img {
   object-fit:cover;
+}
+
+.photo-placeholder {
+  background:#f1e5d7;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  color:#98765a;
+  text-align:center;
+  font-size:11px;
+  padding:8px;
+}
+
+.photo-placeholder span {
+  font-size:28px;
+  margin-bottom:7px;
 }
 
 .item-info {
@@ -184,25 +209,71 @@ nav a:hover {background:var(--naranja);}
   line-height:1.8;
 }
 
-.footer strong {color:#ffc17e;}
+.footer strong {
+  color:#ffc17e;
+}
 
 @media(max-width:700px) {
-  .menu {margin:0;border-radius:0;}
-  header h1 {font-size:27px;}
-  .section {padding:22px 15px;}
-  .items {grid-template-columns:1fr;}
-  nav {gap:5px;padding:10px 5px;}
-  nav a {padding:9px 10px;font-size:10px;}
+  .menu {
+    margin:0;
+    border-radius:0;
+  }
+
+  header h1 {
+    font-size:27px;
+  }
+
+  .section {
+    padding:22px 15px;
+  }
+
+  .items {
+    grid-template-columns:1fr;
+  }
+
+  nav {
+    gap:5px;
+    padding:10px 5px;
+  }
+
+  nav a {
+    padding:9px 10px;
+    font-size:10px;
+  }
 }
 
 @media print {
-  @page {margin:15mm 12mm 20mm;}
-  body {background:white;}
-  .menu {margin:0;max-width:none;box-shadow:none;}
-  nav {display:none;}
-  header {padding:10px;}
-  .section {padding:15px 0;}
-  .items {grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;}
+  @page {
+    margin:15mm 12mm 20mm;
+  }
+
+  body {
+    background:white;
+  }
+
+  .menu {
+    margin:0;
+    max-width:none;
+    box-shadow:none;
+  }
+
+  nav {
+    display:none;
+  }
+
+  header {
+    padding:10px;
+  }
+
+  .section {
+    padding:15px 0;
+  }
+
+  .items {
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:8px;
+  }
+
   .item {
     break-inside:avoid;
     box-shadow:none;
@@ -210,7 +281,13 @@ nav a:hover {background:var(--naranja);}
     padding:7px;
     grid-template-columns:75px 1fr;
   }
-  .item img {width:75px;height:75px;}
+
+  .item img,
+  .photo-placeholder {
+    width:75px;
+    height:75px;
+  }
+
   .footer {
     position:fixed;
     bottom:-14mm;
@@ -222,7 +299,10 @@ nav a:hover {background:var(--naranja);}
     padding:5px;
     font-size:9px;
   }
-  .footer strong {color:#b96325;}
+
+  .footer strong {
+    color:#b96325;
+  }
 }
 </style>
 </head>
@@ -252,44 +332,53 @@ nav a:hover {background:var(--naranja);}
 <div class="item-info">
 <div class="item-name">Empanada de morocho</div>
 <div class="price">$1.20</div>
-</div></article>
+</div>
+</article>
 
 <article class="item">
-<img src=" >" alt="Habas con queso">
+<img src="images/Habas con queso.jpeg" alt="Habas con queso">
 <div class="item-info">
 <div class="item-name">Habas con queso</div>
 <div class="price">$2.50</div>
-</div></article>
+</div>
+</article>
 
 <article class="item">
-<img src=" " alt="Tostado con chicharrón">
+<div class="photo-placeholder">
+<span>🍽</span>Fotografía próximamente
+</div>
 <div class="item-info">
 <div class="item-name">Tostado con chicharrón</div>
 <div class="price">$2.50</div>
-</div></article>
+</div>
+</article>
 
 <article class="item">
 <img src="images/Chocloconqueso.jpeg" alt="Choclo con queso">
 <div class="item-info">
 <div class="item-name">Choclo con queso</div>
 <div class="price">$2.00</div>
-</div></article>
+</div>
+</article>
 
 <article class="item">
-<img src=" " alt="Mote con chicharrón">
+<img src="images/Mote con chicharron.jpeg" alt="Mote con chicharrón">
 <div class="item-info">
 <div class="item-name">Mote con chicharrón</div>
 <div class="price">$4.80</div>
-</div></article>
+</div>
+</article>
 
 <article class="item">
 <img src="images/Maduro.jpeg" alt="Maduro con queso">
 <div class="item-info">
 <div class="item-name">Maduro con queso</div>
 <div class="price">$1.20</div>
-</div></article>
+</div>
+</article>
 
-</div></section>
+</div>
+</section>
 
 <!-- SOPAS -->
 <section class="section" id="sopas">
@@ -297,11 +386,14 @@ nav a:hover {background:var(--naranja);}
 <div class="items">
 
 <article class="item">
-<img src=" " alt="Yahuarlocro">
+<div class="photo-placeholder">
+<span>🍽</span>Fotografía próximamente
+</div>
 <div class="item-info">
 <div class="item-name">Yahuarlocro</div>
 <div class="price">$5.50</div>
-</div></article>
+</div>
+</article>
 
 <article class="item">
 <img src="images/Locro con queso.jpg" alt="Locro con queso">
@@ -309,31 +401,38 @@ nav a:hover {background:var(--naranja);}
 <div class="item-name">Locro con queso</div>
 <div class="item-desc">Sopa espesa de papas preparada con cebolla, mantequilla y leche, acompañada de queso fresco, maíz tostado y aguacate.</div>
 <div class="price">$5.50</div>
-</div></article>
+</div>
+</article>
 
 <article class="item">
-<img src=" " alt="Locro con cuero">
+<div class="photo-placeholder">
+<span>🍽</span>Fotografía próximamente
+</div>
 <div class="item-info">
 <div class="item-name">Locro con cuero</div>
 <div class="item-desc">Sopa espesa de papas preparada con cebolla, mantequilla y leche, acompañada de queso fresco.</div>
 <div class="price">$5.50</div>
-</div></article>
+</div>
+</article>
 
 <article class="item">
 <img src="images/Caldo.jpeg" alt="Caldo de pollo">
 <div class="item-info">
 <div class="item-name">Caldo de pollo</div>
 <div class="price">$5.50</div>
-</div></article>
+</div>
+</article>
 
 <article class="item">
 <img src="images/Papas.jpeg" alt="Papas con cuero">
 <div class="item-info">
 <div class="item-name">Papas con cuero</div>
 <div class="price">$5.50</div>
-</div></article>
+</div>
+</article>
 
-</div></section>
+</div>
+</section>
 
 <!-- PLATOS FUERTES -->
 <section class="section" id="platos">
@@ -345,56 +444,64 @@ nav a:hover {background:var(--naranja);}
 <div class="item-info">
 <div class="item-name">Llapingacho con fritada</div>
 <div class="price">$11.50</div>
-</div></article>
+</div>
+</article>
 
 <article class="item">
 <img src="images/MoteFritada.jpeg" alt="Mote con fritada">
 <div class="item-info">
 <div class="item-name">Mote con fritada</div>
 <div class="price">$8.00</div>
-</div></article>
+</div>
+</article>
 
 <article class="item">
 <img src="images/Choclo.jpeg" alt="Choclo con fritada">
 <div class="item-info">
 <div class="item-name">Choclo con fritada</div>
 <div class="price">$8.00</div>
-</div></article>
+</div>
+</article>
 
 <article class="item">
 <img src="images/Chuleta.jpeg" alt="Chuleta con llapingachos">
 <div class="item-info">
 <div class="item-name">Chuleta con llapingachos</div>
 <div class="price">$11.50</div>
-</div></article>
+</div>
+</article>
 
 <article class="item">
 <img src="images/Lomo.jpeg" alt="Lomo a la plancha">
 <div class="item-info">
 <div class="item-name">Lomo a la plancha</div>
 <div class="price">$12.00</div>
-</div></article>
+</div>
+</article>
 
 <article class="item">
 <img src="images/Churrasco.jpeg" alt="Churrasco">
 <div class="item-info">
 <div class="item-name">Churrasco</div>
 <div class="price">$10.50</div>
-</div></article>
+</div>
+</article>
 
 <article class="item">
 <img src="images/Corvina.jpeg" alt="Corvina frita">
 <div class="item-info">
 <div class="item-name">Corvina frita</div>
 <div class="price">$13.50</div>
-</div></article>
+</div>
+</article>
 
 <article class="item">
 <img src="images/Apanado.jpeg" alt="Apanado">
 <div class="item-info">
 <div class="item-name">Apanado</div>
 <div class="price">$10.50</div>
-</div></article>
+</div>
+</article>
 
 <article class="item">
 <img src="images/Seco de chivo.jpg" alt="Seco de chivo">
@@ -402,9 +509,11 @@ nav a:hover {background:var(--naranja);}
 <div class="item-name">Seco de chivo</div>
 <div class="item-desc">Acompañado con arroz, maduro y ensalada fresca, cocido lentamente con especias tradicionales.</div>
 <div class="price">$11.50</div>
-</div></article>
+</div>
+</article>
 
-</div></section>
+</div>
+</section>
 
 <footer class="footer">
 <strong>A estos precios se agregará el 15 % de I.V.A.</strong>
@@ -415,4 +524,3 @@ EL RIOBAMBEÑITO · Tradición y sabor
 </div>
 </body>
 </html>
-
